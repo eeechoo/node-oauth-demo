@@ -20,6 +20,8 @@ const oauth = async ctx => {
   /*
   Axios 是一个基于 promise 的 HTTP 库,可以用在浏览器和 node.js 中。
   简单的讲就是可以发送get、post请求。
+  
+  还有个工具叫 JQuery 也可以干这个事情。
   */
   const tokenResponse = await axios({
     method: 'post',
