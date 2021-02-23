@@ -50,6 +50,10 @@ const oauth = async ctx => {
 };
 
 app.use(main);
-app.use(route.get('/oauth/redirect', oauth));
+/* 
+这里叫 /oauth/redirect 很棒，
+因为真的对应于这行代码 ctx.response.redirect(`/welcome.html?name=${name}`);
+*/
+app.use(route.get('/oauth/redirect', oauth)); 
 
 app.listen(8080);
