@@ -16,7 +16,11 @@ const main = serve(path.join(__dirname + '/public'));
 const oauth = async ctx => {
   const requestToken = ctx.request.query.code;
   console.log('authorization code:', requestToken);
-
+  
+  /*
+  Axios 是一个基于 promise 的 HTTP 库,可以用在浏览器和 node.js 中。
+  简单的讲就是可以发送get、post请求。
+  */
   const tokenResponse = await axios({
     method: 'post',
     url: 'https://github.com/login/oauth/access_token?' +
